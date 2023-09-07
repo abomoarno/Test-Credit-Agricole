@@ -11,7 +11,7 @@ L'application permet de réaliser les opérations suivantes :
 * Afficher la liste des comptes associés à chaque banque
 * Afficher la liste des opérations de chaque compte
 
-## Présentation
+## Architecture
 
 L'application a été conçue en utilisant les éléments suivants :
 
@@ -46,6 +46,6 @@ Pour activer cette option il faut :
 
 * Aller dans le fichier **app/build.gradle.kts**
 
-* Aller dans le block **buildTypes**
+* Aller dans le bloc **buildTypes**
 
-* Modifier la variable ``` buildConfigField("Boolean", "USE_MOCK", "false") ``` soit dans le block **debug**, soit dans le block **release**, suivant le type de build généré.
+* Modifier la variable ``` buildConfigField("Boolean", "USE_MOCK", "false") ``` soit dans le bloc **debug**, soit dans le bloc **release**, suivant le type de build généré.
