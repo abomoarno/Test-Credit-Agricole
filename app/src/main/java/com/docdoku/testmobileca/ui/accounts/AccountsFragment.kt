@@ -9,6 +9,7 @@ import androidx.fragment.app.activityViewModels
 import com.docdoku.testmobileca.R
 import com.docdoku.testmobileca.databinding.FragmentAccountsBinding
 import com.docdoku.testmobileca.ui.MainViewModel
+import com.docdoku.testmobileca.utils.MocksManager
 import com.docdoku.testmobileca.utils.ResultStatus
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -98,6 +99,12 @@ class AccountsFragment: Fragment() {
          */
 
         if (viewModel.banks.value !is ResultStatus.Success) {
+
+            binding.errorLayout.btnRetry.setOnClickListener {
+                MocksManager.USE_MOCKS = true
+                viewModel.getBanks()
+            }
+
             viewModel.getBanks()
         }
     }

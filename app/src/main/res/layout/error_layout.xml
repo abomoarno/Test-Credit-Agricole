@@ -2,7 +2,7 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:id="@+id/error_layout"
-    android:padding="50dp"
+    android:padding="70dp"
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:gravity="center">
@@ -11,21 +11,23 @@
         android:gravity="center"
         android:layout_marginBottom="20dp"
         android:id="@+id/txt_error"
-        android:textStyle="bold"
+        android:lineSpacingExtra="5dp"
         android:text="@string/technical_error_message"
-        android:textColor="@color/purple_700"
-        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_retry"
         android:textAlignment="center"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:textSize="16sp"
-        android:background="@null"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:lineSpacingExtra="8dp"
+        android:textColor="@color/purple_500"
         android:text="@string/retry"
         android:textAllCaps="false" />
 </androidx.appcompat.widget.LinearLayoutCompat>

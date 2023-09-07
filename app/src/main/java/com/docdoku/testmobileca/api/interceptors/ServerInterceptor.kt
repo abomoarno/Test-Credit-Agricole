@@ -2,6 +2,7 @@ package com.docdoku.testmobileca.api.interceptors
 
 import android.content.Context
 import com.docdoku.testmobileca.BuildConfig
+import com.docdoku.testmobileca.utils.MocksManager
 import okhttp3.Interceptor
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.Protocol
@@ -27,7 +28,8 @@ class ServerInterceptor(val context: Context): Interceptor {
      * @return Response
      */
     override fun intercept(chain: Interceptor.Chain): Response {
-        val response = if(BuildConfig.USE_MOCK) {
+        val response = if(BuildConfig.USE_MOCK || MocksManager.USE_MOCKS) {
+            MocksManager.USE_MOCKS = false
             val responseString: String = getJsonDataFromAsset(context).orEmpty()
             Response.Builder()
                 .code(200)
@@ -38,7 +40,14 @@ class ServerInterceptor(val context: Context): Interceptor {
                 .addHeader("content-type", "application/json")
                 .build()
         } else {
-            chain.proceed(chain.request())
+            Response.Builder()
+                .code(200)
+                .message("responseString")
+                .request(chain.request())
+                .protocol(Protocol.HTTP_1_0)
+                .body("responseString".toByteArray().toResponseBody("application/json".toMediaType()))
+                .addHeader("content-type", "application/json")
+                .build()
         }
         return response
     }

@@ -4,7 +4,7 @@
     <string name="no_account">No account found !</string>
     <string name="balance_holder">%s €</string>
     <string name="message_loading">Loading…</string>
-    <string name="retry">Try again</string>
+    <string name="retry">Try again using mocked data</string>
     <string name="technical_error_message">A technical error occurs ! Please try again later</string>
     <string name="ca_title">Credit Agricole</string>
     <string name="others_title">Autres Banques</string>
