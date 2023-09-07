@@ -19,7 +19,12 @@ import dagger.hilt.components.SingletonComponent
 @InstallIn(SingletonComponent::class)
 interface RepositoriesModule {
 
-    // Binds BanksRepository
+    /**
+     * This function is used to provide a BanksRepository instance
+     *
+     * @param repository: The Repository to provide
+     * @return The Repository provided
+     */
     @Binds
     fun bindBanksRepository(
         repository: BanksRepositoryImpl

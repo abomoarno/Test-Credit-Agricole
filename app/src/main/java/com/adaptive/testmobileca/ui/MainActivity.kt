@@ -19,6 +19,13 @@ import dagger.hilt.android.AndroidEntryPoint
  * Created by Arno ABOMO on 09/06/2023
  */
 
+/**
+ * This is the main activity of the application.
+ *
+ * It contains the navigation graph and the bottom navigation view.
+ * it is responsible to display all the fragments of the application.
+ */
+
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 

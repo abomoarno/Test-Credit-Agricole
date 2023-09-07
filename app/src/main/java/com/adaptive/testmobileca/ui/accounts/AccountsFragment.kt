@@ -19,6 +19,11 @@ import dagger.hilt.android.AndroidEntryPoint
  * Created by Arno ABOMO on 09/06/2023
  */
 
+/**
+ * This fragment is used to display the list of banks and their accounts.
+ * if the list is empty or if an error occurs, the corresponding layout is displayed to the user.
+ */
+
 @AndroidEntryPoint
 class AccountsFragment: Fragment() {
 

@@ -6,6 +6,10 @@ import okio.IOException
 /**
  * Created by Arno ABOMO on 09/06/2023
  */
+
+/*
+ * This is a helper class used to read files content from the assets folder
+ */
 object AssetsUtils {
 
     /*

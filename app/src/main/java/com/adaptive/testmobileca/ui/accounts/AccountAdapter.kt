@@ -10,6 +10,10 @@ import com.adaptive.testmobileca.domaine.BankAccount
  * Created by Arno ABOMO on 09/06/2023
  */
 
+/*
+ * Adapter for the list of bank accounts
+ */
+
 class AccountAdapter(
     private val account: List<BankAccount>,
     private val onSelectBankAccount: (account: BankAccount) -> Unit
@@ -33,6 +37,11 @@ class AccountAdapter(
         holder.bind(account[position])
     }
 
+    /**
+     * View holder for the list of bank accounts
+     *
+     * @param binding
+     */
     inner class AccountViewHolder(private val binding: BankAccountItemViewBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(account: BankAccount) {
             binding.txtBankAccountName.text = account.label

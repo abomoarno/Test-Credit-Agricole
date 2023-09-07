@@ -6,6 +6,13 @@ import androidx.fragment.app.Fragment
 import com.adaptive.testmobileca.R
 import com.adaptive.testmobileca.databinding.EmptyFragmentBinding
 
+/**
+ * Created by Arno ABOMO on 09/06/2023
+ */
+
+/*
+ * Fragment created to satisfy the design of the application.
+ */
 class SimulationFragment: Fragment(R.layout.empty_fragment) {
 
     private lateinit var binding: EmptyFragmentBinding

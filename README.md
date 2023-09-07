@@ -7,7 +7,7 @@ href="https://drive.google.com/drive/folders/1NDcQMqCH5Wm0BQrmvY8uJWAtoUdw1Psv?u
 
 L'application permet de réaliser les opérations suivantes :
 
-* Afficher une liste de banques regroupées en deux catégories : **Les banques CA** et les **Autres banques**
+* Afficher une liste de banques regroupées en deux catégories : **les banques CA** et les **Autres banques**
 * Afficher la liste des comptes associés à chaque banque
 * Afficher la liste des opérations de chaque compte
 
@@ -36,11 +36,11 @@ L'application a été conçue en utilisant les éléments suivants :
 	</div>
 </div>
 
-## Rmarques
+## Remarques
 
 Par défaut, l'application appelle le serveur pour récupérer les data. J'ai néanmoins ajouté un intercepteur dans **Retrofit** qui permet de retourner une réponse mockée. 
 
-Ceci peut être utilisé si le nombre limite de requêtes autorisé est dépassé.
+Ceci peut être utilisé si le nombre limite de requêtes autorisées est dépassé.
 
 Pour activer cette option il faut :
 

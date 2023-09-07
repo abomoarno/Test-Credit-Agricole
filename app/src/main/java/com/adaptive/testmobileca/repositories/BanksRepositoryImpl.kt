@@ -16,6 +16,14 @@ import javax.inject.Inject
 class BanksRepositoryImpl @Inject constructor(
     private val banksDataSource: BanksDataSource
 ): BanksRepository {
+
+
+    /*
+     * This method is used to get the list of banks.
+     * It returns a ResultStatus object.
+     * It contains the list of banks if the request is successful.
+     * Otherwise, it returns an error.
+     */
     override suspend fun getBanks(): ResultStatus<List<Bank>> {
         return try {
             val banks = banksDataSource.getBanks()

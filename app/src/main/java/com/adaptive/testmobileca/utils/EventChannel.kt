@@ -15,8 +15,10 @@ import kotlinx.coroutines.launch
  * Created by Arno ABOMO on 09/06/2023
  */
 
-/*
+/**
  * This class is used to facilitate the use of Flows to send and receive events between components
+ *
+ * @param T the type of the events to send and receive
  */
 
 class EventChannel<T>(private val channel: Channel<T>, private val sendScope: CoroutineScope) {
@@ -33,6 +35,14 @@ class EventChannel<T>(private val channel: Channel<T>, private val sendScope: Co
     }
 }
 
+/**
+ * This class is used to observe a Flow and collect its values when the lifecycle is in the started state.
+ * It is used by the EventChannel class.
+ *
+ * @param lifecycleOwner the lifecycle owner of the component that will receive the events
+ * @param flow the flow to observe
+ * @param collector the callback that will be called when the flow emits a value
+ */
 class FlowObserver<T> (
     private val lifecycleOwner: LifecycleOwner,
     private val flow: Flow<T>,

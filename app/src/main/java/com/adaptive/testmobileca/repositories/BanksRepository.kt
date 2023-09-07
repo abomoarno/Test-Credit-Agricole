@@ -14,5 +14,12 @@ import com.adaptive.testmobileca.utils.ResultStatus
  */
 
 interface BanksRepository {
+
+    /*
+     * This method is used to get the list of banks.
+     * It returns a ResultStatus object.
+     * It contains the list of banks if the request is successful.
+     * Otherwise, it returns an error.
+     */
     suspend fun getBanks(): ResultStatus<List<Bank>>
 }

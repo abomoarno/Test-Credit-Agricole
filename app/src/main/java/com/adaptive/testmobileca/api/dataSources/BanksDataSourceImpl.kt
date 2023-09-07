@@ -16,6 +16,10 @@ import javax.inject.Inject
 class BanksDataSourceImpl @Inject constructor(
     private val apiService: ApiService
 ) : BanksDataSource {
+
+    /*
+     * This method is used to get the list of banks from the server.
+     */
     override suspend fun getBanks(): List<Bank> {
         return apiService.getBanks()
     }

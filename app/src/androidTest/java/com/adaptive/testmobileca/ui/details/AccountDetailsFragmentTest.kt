@@ -16,8 +16,15 @@ import org.junit.Assert.*
 import org.junit.Test
 import kotlin.random.Random
 
-class AccountDetailsFragmentTest{
+/**
+ * Created by Arno ABOMO on 09/06/2023
+ */
 
+/*
+ * We add some basic tests to check if the fragment is launched
+ */
+
+class AccountDetailsFragmentTest{
 
     @Test
     fun test_fragment_displayed(){

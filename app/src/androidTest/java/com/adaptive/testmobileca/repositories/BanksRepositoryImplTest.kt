@@ -15,6 +15,10 @@ import org.junit.Test
  * Created by Arno ABOMO on 09/06/2023
  */
 
+/*
+  * This class is used to test the BanksRepositoryImpl class
+ */
+
 @ExperimentalCoroutinesApi
 class BanksRepositoryImplTest{
 
@@ -22,6 +26,7 @@ class BanksRepositoryImplTest{
 
     private lateinit var fakeDataSource: com.adaptive.testmobileca.api.FakeDataSource
 
+    // Before each test, we initialize the repository and the fakeDataSource
     @Before
     fun setUp() {
 

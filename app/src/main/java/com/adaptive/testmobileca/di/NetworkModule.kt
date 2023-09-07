@@ -28,6 +28,12 @@ import java.util.concurrent.TimeUnit
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
+    /**
+     * This method is used to provide the ApiService
+
+     * @param context
+     * @return ApiService
+     */
     @Provides
     fun provideApiService(
         @ApplicationContext context: Context
@@ -40,6 +46,13 @@ object NetworkModule {
             .create(ApiService::class.java)
     }
 
+
+    /**
+     * This helper method is used to build the OkHttpClient to be use by the Retrofit instance
+
+     * @param context
+     * @return OkHttpClient
+     */
     private fun buildHttpClient(context: Context) = OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().apply {
                 level = HttpLoggingInterceptor.Level.BODY

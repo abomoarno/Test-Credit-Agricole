@@ -17,6 +17,11 @@ import java.util.Locale
  * Created by Arno ABOMO on 09/06/2023
  */
 
+/**
+ * Fragment to display the details of a each bank account.
+ * This includes the account balance, the account name and the list of operations for this account.
+ */
+
 class AccountDetailsFragment: Fragment(R.layout.fragment_account_details) {
 
     private lateinit var binding: FragmentAccountDetailsBinding
@@ -44,6 +49,8 @@ class AccountDetailsFragment: Fragment(R.layout.fragment_account_details) {
                     )
                 )
 
+                // Sort the operations by date then by title
+
                 binding.rvOperations.adapter = OperationAdapter(
                     bankAccount.operations.sortedWith(compareBy<Operation> {
                         SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE).format(Date(it.date.toLong()))
@@ -62,6 +69,8 @@ class AccountDetailsFragment: Fragment(R.layout.fragment_account_details) {
     }
 
     companion object {
+
+        // This constant will be used to pass the bank account to the fragment as a Parcelable
         const val ARG_ACCOUNT = "account"
     }
 

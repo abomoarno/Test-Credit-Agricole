@@ -14,6 +14,12 @@ import com.adaptive.testmobileca.domaine.BankAccount
  * Created by Arno ABOMO on 09/06/2023
  */
 
+/*
+ * Adapter for the list of banks.
+ * This adapter is used to display the list of banks and their accounts.
+ * It will also display the section in which the bank belongs to.
+ */
+
 class BankAdapter(
     private val items: List<DisplayItem>,
     private val onSelectBankAccount: (account: BankAccount) -> Unit
@@ -62,6 +68,11 @@ class BankAdapter(
             }
     }
 
+    /**
+     * View holder for the list of banks
+     *
+     * @param binding
+     */
     inner class BankViewHolder(private val binding: BankItemViewBinding): RecyclerView.ViewHolder(binding.root) {
 
         fun bind(bank: Bank) {
@@ -94,6 +105,11 @@ class BankAdapter(
         }
     }
 
+    /**
+     * View holder for the the section title
+     *
+     * @param binding: BankGroupItemViewBinding
+     */
     inner class SectionViewHolder(private val binding: BankGroupItemViewBinding): RecyclerView.ViewHolder(binding.root) {
 
         fun bind(title: String) {

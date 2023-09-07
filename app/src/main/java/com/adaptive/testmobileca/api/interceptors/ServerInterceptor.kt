@@ -15,11 +15,17 @@ import okio.IOException
 
 /*
  * This class is used to intercept the request and return a mock response
- * if the BuildConfig.USE_MOCK is true
  */
 
 class ServerInterceptor(val context: Context): Interceptor {
 
+    /**
+     * This method is used to intercept the request and return a mock response from the assets folder
+     * if the BuildConfig.USE_MOCK is true
+     *
+     * @param chain
+     * @return Response
+     */
     override fun intercept(chain: Interceptor.Chain): Response {
         val response = if(BuildConfig.USE_MOCK) {
             val responseString: String = getJsonDataFromAsset(context).orEmpty()
@@ -37,8 +43,11 @@ class ServerInterceptor(val context: Context): Interceptor {
         return response
     }
 
-    /*
+    /**
      * This method is used to read the json file containing mocked data from the assets folder
+     *
+     * @param context
+     * @return String
      */
     private fun getJsonDataFromAsset(context: Context): String? {
         val jsonString: String

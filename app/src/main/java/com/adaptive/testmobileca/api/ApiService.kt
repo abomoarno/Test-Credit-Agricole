@@ -13,7 +13,9 @@ import retrofit2.http.GET
 
 interface ApiService {
 
-    // Get all banks
+    /*
+     * This function is used to get the list of banks from the API.
+     */
     @GET("banks.json")
     suspend fun getBanks(): List<Bank>
 

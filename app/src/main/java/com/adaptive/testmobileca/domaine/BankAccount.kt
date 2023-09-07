@@ -9,6 +9,20 @@ import kotlinx.parcelize.Parcelize
  * Created by Arno ABOMO on 09/06/2023
  */
 
+/**
+ * This data class contains all the information about a bank account
+ *
+ * @property order
+ * @property id
+ * @property holder
+ * @property role
+ * @property contractNumber
+ * @property label
+ * @property productCode
+ * @property balance
+ * @property operations
+ */
+
 @Parcelize
 data class BankAccount(
 

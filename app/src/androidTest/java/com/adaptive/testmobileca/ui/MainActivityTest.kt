@@ -13,6 +13,10 @@ import org.junit.Test
  * Created by Arno ABOMO on 09/06/2023
  */
 
+/*
+ * We add some basic tests to check if the activity is launched
+ */
+
 class MainActivityTest{
 
     @get: Rule

@@ -11,5 +11,9 @@ import com.adaptive.testmobileca.domaine.Bank
  */
 
 interface BanksDataSource {
+
+    /*
+     * This method is used to get the list of banks from the server.
+     */
     suspend fun getBanks(): List<Bank>
 }

@@ -24,6 +24,16 @@ import javax.inject.Inject
  * Created by Arno ABOMO on 09/06/2023
  */
 
+/**
+ * ViewModel for the main screen.
+ *
+ * This ViewModel is responsible for fetching the list of banks and exposing it to the UI.
+ *
+ * @property repository the repository to fetch the list of banks.
+ * @property event the event channel to send events to the UI.
+ * @property banks the list of banks as a LiveData. It is observed by the UI.
+ */
+
 @HiltViewModel
 class MainViewModel @Inject constructor(
     @ApplicationContext context: Context,
@@ -35,6 +45,7 @@ class MainViewModel @Inject constructor(
     private val _banks = MutableLiveData<ResultStatus<List<Bank>>>()
     val banks: LiveData<ResultStatus<List<Bank>>> = _banks
 
+    // This method is by the UI to fetch the list of banks.
     fun getBanks() {
         viewModelScope.launch(IO) {
             withContext(Main){
@@ -46,6 +57,7 @@ class MainViewModel @Inject constructor(
         }
     }
 
+    // This method is called when the user clicks on a bank account, to display the details of this account.
     fun goToDetails(bankAccount: BankAccount) {
         event.send(Event.ShowDetails(bankAccount))
     }

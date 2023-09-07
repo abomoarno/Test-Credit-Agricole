@@ -12,11 +12,18 @@ import java.io.IOException
 
 /*
  * This class is used to intercept the request and add a header to it.
- * We can also make necessary changes to the request here before sending it to the server.
  */
 
 class AddHeaderInterceptor: Interceptor {
 
+    /**
+     * This method is used to intercept the request and add a header to it.
+     * We can also make necessary changes to the request here before sending it to the server.
+     *
+     * @param chain
+     * @return Response
+     * @throws IOException
+     */
     @Throws(IOException::class)
     override fun intercept(chain: Interceptor.Chain): Response {
         val original: Request = chain.request()

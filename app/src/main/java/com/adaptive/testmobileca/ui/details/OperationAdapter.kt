@@ -14,6 +14,12 @@ import java.util.Locale
  * Created by Arno ABOMO on 09/06/2023
  */
 
+/**
+ * Adapter to display the list of operations for a bank account.
+ *
+ * @param operations the list of operations to display
+ */
+
 class OperationAdapter(
     private val operations: List<Operation>
 ): RecyclerView.Adapter<OperationAdapter.OperationViewHolder>() {
@@ -37,6 +43,9 @@ class OperationAdapter(
         holder.bind(operations[position])
     }
 
+    /**
+     * View holder for each operation item.
+     */
     inner class OperationViewHolder(private val binding: OperationItemViewBinding): RecyclerView.ViewHolder(binding.root) {
 
         fun bind(operation: Operation) {
