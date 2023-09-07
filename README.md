@@ -24,25 +24,14 @@ L'application a été conçue en utilisant les éléments suivants :
 
 ## Résultat
 
-<style>
-	.container{
-		display: flex;
-	}
-
-	.segImg{
-    	flex: 1;
-    	margin: 15px;
-	}
-</style>
-
-<div class="container">
-	<div class="segImg">
+<div class="container" style="display: flex;">
+	<div class="segImg" style="flex: 1; margin: 15px;">
     	<img src="screenShots/sc_1.png" alt="segments" style="height: auto; width: auto;">
 	</div>
-	<div class="segImg">
+	<div class="segImg" style="flex: 1; margin: 15px;">
     	<img src="screenShots/sc_2.png" alt="segments" style="height: auto; width: auto;">
 	</div>
-	<div class="segImg">
+	<div class="segImg" style="flex: 1; margin: 15px;">
     	<img src="screenShots/sc_3.png" alt="segments" style="height: auto; width: auto;">
 	</div>
 </div>
