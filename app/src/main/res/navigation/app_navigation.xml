@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_accounts"
+    android:id="@+id/app_navigation">
+
+    <fragment
+        android:id="@+id/nav_accounts"
+        android:name="com.adaptive.testmobileca.ui.accounts.AccountsFragment"
+        android:label="@string/my_accounts"
+        tools:layout="@layout/fragment_accounts" >
+
+        <action
+            android:id="@+id/action_nav_accounts_to_nav_details"
+            app:destination="@id/nav_details" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_details"
+        android:name="com.adaptive.testmobileca.ui.details.AccountDetailsFragment"
+        android:label="@string/my_accounts"
+        tools:layout="@layout/fragment_account_details" />
+
+    <fragment
+        android:id="@+id/nav_simulation"
+        android:name="com.adaptive.testmobileca.ui.simulation.SimulationFragment"
+        android:label="Simulation Fragment"
+        tools:layout="@layout/empty_fragment" />
+
+    <fragment
+        android:id="@+id/nav_play"
+        android:name="com.adaptive.testmobileca.ui.play.PlayFragment"
+        android:label="Play Fragment"
+        tools:layout="@layout/empty_fragment" />
+
+</navigation>

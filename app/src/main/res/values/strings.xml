@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Test Mobile CA</string>
+    <string name="no_operation">This account has no operations yet.</string>
+    <string name="no_account">No account found !</string>
+    <string name="balance_holder">%s €</string>
+    <string name="message_loading">Loading…</string>
+    <string name="retry">Try again</string>
+    <string name="technical_error_message">A technical error occurs ! Please try again later</string>
+    <string name="ca_title">Credit Agricole</string>
+    <string name="others_title">Autres Banques</string>
+    <string name="my_accounts">Mes comptes</string>
+    <string name="simulation">Simulation</string>
+    <string name="play">A vous de jouer</string>
+    <string name="empty_fragment_holder">Welcome to %s fragment</string>
+</resources>

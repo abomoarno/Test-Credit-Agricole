@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:background="@color/default_background"
+            app:title="@string/my_accounts"
+            app:titleTextColor="@color/black"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_scrollFlags="scroll|enterAlways"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/app_navigation"
+        app:layout_constraintTop_toBottomOf="@id/appbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:defaultNavHost="true"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/default_background"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        app:itemIconTint="@drawable/bottom_nav_colors"
+        app:itemTextColor="@drawable/bottom_nav_colors"
+        app:elevation="10dp"
+        app:menu="@menu/app_bottom_menu"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

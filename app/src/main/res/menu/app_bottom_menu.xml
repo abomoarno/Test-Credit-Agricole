@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/nav_accounts"
+        android:icon="@drawable/baseline_star_24"
+        app:showAsAction="ifRoom"
+        android:title="@string/my_accounts" />
+
+    <item android:id="@+id/nav_simulation"
+        android:icon="@drawable/baseline_star_24"
+        app:showAsAction="ifRoom"
+        android:title="@string/simulation" />
+
+    <item android:id="@+id/nav_play"
+        android:icon="@drawable/baseline_star_24"
+        app:showAsAction="ifRoom"
+        android:title="@string/play" />
+
+</menu>
