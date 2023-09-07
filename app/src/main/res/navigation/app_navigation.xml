@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_accounts"
-        android:name="com.adaptive.testmobileca.ui.accounts.AccountsFragment"
+        android:name="com.docdoku.testmobileca.ui.accounts.AccountsFragment"
         android:label="@string/my_accounts"
         tools:layout="@layout/fragment_accounts" >
 
@@ -19,19 +19,19 @@
 
     <fragment
         android:id="@+id/nav_details"
-        android:name="com.adaptive.testmobileca.ui.details.AccountDetailsFragment"
+        android:name="com.docdoku.testmobileca.ui.details.AccountDetailsFragment"
         android:label="@string/my_accounts"
         tools:layout="@layout/fragment_account_details" />
 
     <fragment
         android:id="@+id/nav_simulation"
-        android:name="com.adaptive.testmobileca.ui.simulation.SimulationFragment"
+        android:name="com.docdoku.testmobileca.ui.simulation.SimulationFragment"
         android:label="Simulation Fragment"
         tools:layout="@layout/empty_fragment" />
 
     <fragment
         android:id="@+id/nav_play"
-        android:name="com.adaptive.testmobileca.ui.play.PlayFragment"
+        android:name="com.docdoku.testmobileca.ui.play.PlayFragment"
         android:label="Play Fragment"
         tools:layout="@layout/empty_fragment" />
 

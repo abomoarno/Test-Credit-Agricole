@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.adaptive.testmobileca"
+    namespace = "com.docdoku.testmobileca"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.adaptive.testmobileca"
+        applicationId = "com.docdoku.testmobileca"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
