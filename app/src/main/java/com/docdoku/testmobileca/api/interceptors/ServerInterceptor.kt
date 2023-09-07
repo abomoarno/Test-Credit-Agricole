@@ -40,14 +40,7 @@ class ServerInterceptor(val context: Context): Interceptor {
                 .addHeader("content-type", "application/json")
                 .build()
         } else {
-            Response.Builder()
-                .code(200)
-                .message("responseString")
-                .request(chain.request())
-                .protocol(Protocol.HTTP_1_0)
-                .body("responseString".toByteArray().toResponseBody("application/json".toMediaType()))
-                .addHeader("content-type", "application/json")
-                .build()
+            chain.proceed(chain.request())
         }
         return response
     }
